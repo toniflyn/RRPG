@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #7a5d4e; /* Cor de fundo como fallback */
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Mesa.webp'); /* Caminho ajustado para a imagem de fundo */
+    background-size: cover; /* Certifique-se de que a imagem de fundo cubra toda a página */
+    background-position: center; /* Centralize a imagem de fundo */
+    background-attachment: fixed;
+}
+
+#frase-topo {
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Aumentado para dar mais espaço */
+    flex: 0; /* Não crescer */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    margin: 20px; /* Margem ao redor do topo para distanciamento do conteúdo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais sofisticada */
+    font-size: 24px; /* Tamanho maior da fonte */
+    font-weight: 500; /* Peso da fonte para dar ênfase */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para melhorar contraste */
+    max-width: 80%; /* Largura máxima para evitar linhas muito longas em telas grandes */
+    margin-left: auto; /* Centraliza o bloco */
+    margin-right: auto; /* Centraliza o bloco */
+}
+
+
+#container-cartas {
+    flex: 1; /* Crescer para preencher o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza as cartas horizontalmente */
+    align-items: flex-start; /* Alinha as cartas no topo */
+    flex-wrap: wrap; /* Permite que as cartas se ajustem conforme a largura do contêiner */
+    padding: 20px;
+}
+
+.carta-container {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os elementos na direção transversal */
+    margin: 10px;
+}
+
+.carta {
+    width: 365px; /* Largura da carta */
+    height: 626px; /* Altura da carta */
+    background-image: url(../img/back.jfif); /* Imagem de fundo das cartas */
+    background-size: cover; /* Certifique-se de que a imagem da carta preenche o espaço */
+    background-position: center; /* Centraliza a imagem da carta */
+    border: 1px solid #000; /* Adiciona uma borda para as cartas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra para dar profundidade */
+    transition: transform 0.3s ease; /* Para animações suaves */
+    margin: 10px; /* Espaço entre as cartas */
+}
+
+#container-botao {
+    text-align: center; /* Centraliza o botão horizontalmente */
+    padding: 20px;
+    flex: 0; /* Não crescer */
+}
+
+#botao-leitura {
+    padding: 12px 30px; /* Ajuste para mais espaço interno, tornando-o mais fácil de clicar */
+    font-size: 18px; /* Tamanho de fonte maior para destacar */
+    font-weight: bold; /* Fonte em negrito para chamar atenção */
+    color: #FFFFFF; /* Cor do texto */
+    background: linear-gradient(145deg, #6a1b9a, #8e24aa); /* Gradiente de cor para um visual único */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas para suavidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para adicionar profundidade */
+    cursor: pointer; /* Cursor de mão para indicar que é clicável */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover e foco */
+}
+
+#botao-leitura:hover, #botao-leitura:focus {
+    background: linear-gradient(145deg, #8e24aa, #9c27b0); /* Gradiente mais claro para efeito de hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra maior para efeito de elevação */
+    transform: translateY(-2px); /* Mover ligeiramente para cima ao passar o mouse/focar */
+}
+
+#botao-leitura:active {
+    background: linear-gradient(145deg, #6a1b9a, #7b1fa2); /* Gradiente mais escuro para efeito de clique */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menor para efeito de pressionar */
+    transform: translateY(1px); /* Mover ligeiramente para baixo ao clicar */
+}
+
+
+.status-carta {
+    text-align: center;
+    font-size: 24px; /* Tamanho da fonte aumentado para melhor visibilidade */
+    margin-top: 10px; /* Espaçamento ajustado para consistência */
+    color: white; /* Cor do texto */
+    background-color: rgba(0, 0, 0, 0.767); /* Fundo preto semi-transparente */
+    width: 365px; /* Largura igual à das cartas para alinhamento */
+    padding: 5px; /* Um pouco de padding para distanciar o texto das bordas */
+    border-radius: 8px; /* Bordas levemente arredondadas para estética */
+}
